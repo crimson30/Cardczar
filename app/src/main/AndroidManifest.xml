@@ -24,6 +24,14 @@
             android:name=".UserStartActivity"
             android:label="@string/title_activity_user_start" >
         </activity>
+        <activity
+            android:name=".RoomActivity"
+            android:label="@string/title_activity_room" >
+        </activity>
+        <activity
+            android:name=".GameplayActivity"
+            android:label="@string/title_activity_gameplay" >
+        </activity>
     </application>
 
 </manifest>
