@@ -17,22 +17,12 @@ public class MainActivity extends Activity {
         setContentView(R.layout.activity_main);
 
         Button joinButton = (Button) findViewById(R.id.joinButton);
-        Button hostButton = (Button) findViewById(R.id.hostButton);
 
         joinButton.setOnClickListener(
                 new Button.OnClickListener() {
                     public void onClick(View v) {
                         Intent join = new Intent(MainActivity.this, UserStartActivity.class);
                         startActivity(join);
-                    }
-                }
-        );
-
-        hostButton.setOnClickListener(
-                new Button.OnClickListener() {
-                    public void onClick(View v) {
-                        Intent host = new Intent(MainActivity.this, HostStartActivity.class);
-                        startActivity(host);
                     }
                 }
         );
@@ -59,5 +49,10 @@ public class MainActivity extends Activity {
         }
 
         return super.onOptionsItemSelected(item);
+    }
+
+    public void intentToHostStart(View view) {
+        Intent host = new Intent(this, HostStartActivity.class);
+        startActivity(host);
     }
 }

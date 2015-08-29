@@ -1,9 +1,12 @@
 package com.example.crimson30.cardczar;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.Button;
 
 public class RoomActivity extends Activity {
 
@@ -11,6 +14,27 @@ public class RoomActivity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_room);
+
+        Button refreshUsersButton = (Button) findViewById(R.id.joinButton);
+        Button gameStartButton = (Button) findViewById(R.id.hostButton);
+
+        refreshUsersButton.setOnClickListener(
+                new Button.OnClickListener() {
+                    public void onClick(View v) {
+                        // refresh code
+                    }
+                }
+        );
+
+        gameStartButton.setOnClickListener(
+                new Button.OnClickListener() {
+                    public void onClick(View v) {
+                        Intent gameplay = new Intent(RoomActivity.this, HostStartActivity.class);
+                        startActivity(gameplay);
+                    }
+                }
+        );
+
     }
 
     @Override
