@@ -49,6 +49,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/hostStartButtonText"
+        android:onClick="intentToRoom"
         android:id="@+id/roomStartButton"
         android:layout_below="@+id/hostnameEditText"
         android:layout_centerHorizontal="true"

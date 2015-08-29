@@ -52,7 +52,12 @@ public class MainActivity extends Activity {
     }
 
     public void intentToHostStart(View view) {
-        Intent host = new Intent(this, HostStartActivity.class);
-        startActivity(host);
+        Intent hostIntent = new Intent(this, HostStartActivity.class);
+        startActivity(hostIntent);
+    }
+
+    public void intentToUserStart(View view) {
+        Intent userIntent = new Intent(this, UserStartActivity.class);
+        startActivity(userIntent);
     }
 }

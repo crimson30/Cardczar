@@ -15,26 +15,6 @@ public class RoomActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_room);
 
-        Button refreshUsersButton = (Button) findViewById(R.id.joinButton);
-        Button gameStartButton = (Button) findViewById(R.id.hostButton);
-
-        refreshUsersButton.setOnClickListener(
-                new Button.OnClickListener() {
-                    public void onClick(View v) {
-                        // refresh code
-                    }
-                }
-        );
-
-        gameStartButton.setOnClickListener(
-                new Button.OnClickListener() {
-                    public void onClick(View v) {
-                        Intent gameplay = new Intent(RoomActivity.this, HostStartActivity.class);
-                        startActivity(gameplay);
-                    }
-                }
-        );
-
     }
 
     @Override
@@ -57,5 +37,10 @@ public class RoomActivity extends Activity {
         }
 
         return super.onOptionsItemSelected(item);
+    }
+
+    public void intentToGameplay(View view) {
+        Intent gameplayIntent = new Intent(this, GameplayActivity.class);
+        startActivity(gameplayIntent);
     }
 }

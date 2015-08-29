@@ -14,18 +14,6 @@ public class HostStartActivity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_host_start);
-
-        Button roomStartButton = (Button) findViewById(R.id.joinButton);
-
-        roomStartButton.setOnClickListener(
-                new Button.OnClickListener() {
-                    public void onClick(View v) {
-                        Intent room = new Intent(HostStartActivity.this, RoomActivity.class);
-                        startActivity(room);
-                    }
-                }
-        );
-
     }
 
     @Override
@@ -48,5 +36,10 @@ public class HostStartActivity extends Activity {
         }
 
         return super.onOptionsItemSelected(item);
+    }
+
+    public void intentToRoom(View view) {
+        Intent roomIntent = new Intent(this, RoomActivity.class);
+        startActivity(roomIntent);
     }
 }
