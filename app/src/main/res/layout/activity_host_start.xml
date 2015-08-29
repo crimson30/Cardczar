@@ -1,0 +1,56 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    tools:context="com.example.crimson30.cardczar.HostStartActivity">
+
+    TextView android:text="@string/hello_world" android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="@string/roomnameTextViewText"
+        android:id="@+id/roomnameTextView"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:gravity="center"/>
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/roomnameEditText"
+        android:layout_below="@+id/roomnameTextView"
+        android:layout_centerHorizontal="true"
+        android:text="@string/roomnameEditTextText"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="@string/hostnameTextViewText"
+        android:id="@+id/hostnameTextView"
+        android:layout_below="@+id/roomnameEditText"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="45dp" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/hostnameEditText"
+        android:layout_below="@+id/hostnameTextView"
+        android:layout_centerHorizontal="true"
+        android:text="@string/hostnameEditTextText" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/hostStartButtonText"
+        android:id="@+id/roomStartButton"
+        android:layout_below="@+id/hostnameEditText"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="63dp" />
+</RelativeLayout>
