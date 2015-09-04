@@ -19,14 +19,11 @@ import org.apache.http.util.EntityUtils;
 import java.io.IOException;
 
 public class RoomActivity extends Activity {
-    String result;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_room);
-
-
     }
 
     @Override
@@ -52,7 +49,6 @@ public class RoomActivity extends Activity {
     }
 
     public void intentToGameplay(View view) {
-
 
         Intent gameplayIntent = new Intent(this, GameplayActivity.class);
         startActivity(gameplayIntent);
